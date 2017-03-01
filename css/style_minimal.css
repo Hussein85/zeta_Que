@@ -188,3 +188,23 @@ h2{
 }
 
 
+/*If screen is smaller than 200px*/
+ @media only screen and (max-width: 200px) {
+
+    /*Kassa */
+    h5{
+        font-size: 0.5em;
+     
+    }
+
+    /*Kassa nummer */
+    h3{
+        font-size: 1em;
+    }
+    
+.btn {
+    font-size:5px;
+    width: 2em;  height: 2em;
+  }
+
+}

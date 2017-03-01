@@ -5,9 +5,18 @@ function openWin() {
 }
 
 
-// Change flashing duration and interval
+// Change flash duration and interval
 var flashInterval = 500;
-var duration = 30000;
+var duration = 30000;           // in milliseconds
+
+
+// Check if queData is stored in localstorage, if not then create it.
+if (localStorage.getItem('queData') === null){  
+    var queData = { 'kassa': 30, 'totalIKassa': 0, 'radgivning': 45, 'totalRad': 5, 'verkstad': 20, 'totalVerk': 2};
+    localStorage.setItem('queData', JSON.stringify(queData));
+}else{
+    loadData();
+}
 
 
 function nextKassa() {   
@@ -40,6 +49,7 @@ function backVerk() {
 var t1;
 var t2;
 function nextKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
+
     var kassaNr = parseInt(document.getElementById(queNbrId).innerHTML);
     var antalIKö = parseInt(document.getElementById(totalQueNbrId).innerHTML);
     kassaNr += 1;
@@ -61,7 +71,13 @@ function nextKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
             text.style.color = 'black';
         }      
      }, duration);
-     
+
+     // Save kassaNr and antalIKö to localStorage
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     temp1['kassa'] = kassaNr;
+     temp1['totalIKassa'] = antalIKö;
+     localStorage.setItem('queData', JSON.stringify(temp1));
+
 }
 
 
@@ -89,6 +105,13 @@ function backKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
             text.style.color = 'black';
         }
     }, duration);
+
+     // Save kassaNr and antalIKö to localStorage
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     temp1['kassa'] = kassaNr;
+     temp1['totalIKassa'] = antalIKö;
+     localStorage.setItem('queData', JSON.stringify(temp1));
+
 }
 
 
@@ -119,6 +142,12 @@ function nextRad1(queNbrId, totalQueNbrId, flashInterval, duration ){
         }      
      }, duration);
      
+      // Save kassaNr and antalIKö to localStorage
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     temp1['radgivning'] = kassaNr;
+     temp1['totalRad'] = antalIKö;
+     localStorage.setItem('queData', JSON.stringify(temp1));
+
 }
 
 
@@ -146,6 +175,12 @@ function backRad1(queNbrId, totalQueNbrId, flashInterval, duration ){
             text.style.color = 'black';
         }
     }, duration);
+
+      // Save kassaNr and antalIKö to localStorage
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     temp1['radgivning'] = kassaNr;
+     temp1['totalRad'] = antalIKö;
+     localStorage.setItem('queData', JSON.stringify(temp1));
 }
 
 
@@ -175,6 +210,12 @@ function nextVerk1(queNbrId, totalQueNbrId, flashInterval, duration ){
             text.style.color = 'black';
         }      
      }, duration);
+
+       // Save kassaNr and antalIKö to localStorage
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     temp1['verkstad'] = kassaNr;
+     temp1['totalVerk'] = antalIKö;
+     localStorage.setItem('queData', JSON.stringify(temp1));
      
 }
 
@@ -203,6 +244,12 @@ function backVerk1(queNbrId, totalQueNbrId, flashInterval, duration ){
             text.style.color = 'black';
         }
     }, duration);
+
+     // Save kassaNr and antalIKö to localStorage
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     temp1['verkstad'] = kassaNr;
+     temp1['totalVerk'] = antalIKö;
+     localStorage.setItem('queData', JSON.stringify(temp1));
 }
 
 
@@ -212,3 +259,17 @@ function flashText(queNbrId) {
     var text = document.getElementById(queNbrId);
     text.style.color = (text.style.color=='red') ? 'black':'red';
 }
+
+
+function loadData(){
+     var temp1 = JSON.parse(localStorage.getItem('queData'));
+     document.getElementById("kassaNr").innerHTML = temp1.kassa;
+     document.getElementById("totalInQueNr").innerHTML = temp1.totalIKassa;
+     document.getElementById("radQueNr").innerHTML = temp1.radgivning;
+     document.getElementById("totalRadQueNr").innerHTML = temp1.totalRad;
+     document.getElementById("verkNbr").innerHTML = temp1.verkstad;
+     document.getElementById("totalVerkNbr").innerHTML = temp1.totalVerk;
+
+}
+
+
