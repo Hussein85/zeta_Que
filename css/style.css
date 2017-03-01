@@ -1,0 +1,182 @@
+/*If screen is larger than 160x120*/
+ @media only screen and (max-width: 300px) {
+
+    h1{
+        font-size: 1em;
+    
+    }
+
+    h2{
+        font-size: 0.2em;
+    }
+    
+    h3{
+        font-size: 0.2em;
+    }
+
+.btn {
+    font-size:1em;
+  }
+
+
+}
+/*If screen is smaller than 500px*/
+ @media only screen and (max-width: 499px) {
+
+    h1{
+        font-size: 2em;
+     
+    }
+
+    h2{
+        font-size: 1em;
+   
+    }
+    
+    h3{
+        font-size: 1em;
+   
+    }
+.btn {
+    font-size:11px;
+  }
+
+}
+
+/*If screen is larger than 500px*/
+ @media only screen and (min-width: 500px) {
+
+    h1{
+        font-size: 7em;
+    
+    }
+
+    h2{
+        font-size: 1em;
+    }
+    
+    h3{
+        font-size: 1em;
+    }
+
+.btn {
+    font-size:9px;
+  }
+
+
+}
+  
+
+ html, body {
+        height: 100%;
+        margin: 0px;
+    }
+
+body {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+ .fill-height{
+    height:100%;
+      
+}
+
+
+.container_left{
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    text-align: center; 
+    height:100%;
+}
+.container_center{
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    text-align: center; 
+    height:100%;
+}
+.container_right{
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    text-align: center; 
+    height:100%;
+}
+.container-fluid{
+    padding: 0px;
+
+}
+
+.menu_bar{
+    margin-top: 0px;
+   
+    padding: 5px;
+}
+.que_title{
+    margin-top: -10px;
+}
+.que_number{
+    padding: 0px;
+    margin-top: -30px;
+}
+.total_in_que{
+    margin-top: 65px;
+
+}
+.total_in_que_number{
+    -webkit-text-fill-color: yellow;
+    margin-top: -18px; 
+}
+
+.footer{
+    display: inline-block;
+    margin-top: 65px;
+    margin-left: 0px;
+
+}
+.back_arrow{
+    margin-left: -120px;
+    margin-top: 0px;
+}
+.btn{
+    margin-top: -50px;
+    margin-left: 10px;
+    min-width: 60px;
+}
+/*rädgivning*/
+.rad_que_title{
+    margin-top: 50px;
+}
+.rad_que_number{
+    padding: 0px;
+    margin-top: -30px;
+}
+.rad_total_in_que{
+    margin-top: 65px;
+
+}
+.rad_total_in_que_number{
+   
+    margin-top: -18px;
+    
+}
+
+.rad_footer{
+    display: inline-block;
+    margin-top: 65px;
+    margin-left: 0px;
+
+}
+.rad_row {
+    margin-left: 38px;
+    margin-top: 0px;
+}
+.rad_back_arrow{
+    margin-left: -130px;
+    margin-top: 0px;
+}
+.floating-box{
+    display: inline-block;
+}
+
