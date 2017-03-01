@@ -37,7 +37,7 @@
         </div>
         <div class="row">
         <div class="que_number">
-            <h1>30</h1>
+            <h1 id="kassaNr">30</h1>
         </div>
         </div>
         <div class="row">
@@ -47,16 +47,17 @@
         </div>
         <div class="row">
         <div class="total_in_que_number">
-             <h3 style="color: orangered">0</h3>
+             <h3 id="totalInQueNr" style="color: orangered">0</h3>
         </div>
         </div>
         <div class='row'>
          <div class="footer">
         <div class="back_arrow">
-         <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
+         <i onclick="backKassa()" style="cursor:pointer" class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
         </div>
-        <div class="btn btn-primary btn-lg btn-responsive">Nästa</div>
+        <div onclick="nextKassa()" class="btn btn-primary btn-lg btn-responsive">Nästa</div>
         </div><br>
+        <audio id="audio1" src="01.wav"></audio>
        </div>
    </div>
     
@@ -71,7 +72,7 @@
         </div>
         <div class="row">
         <div class="rad_que_number">
-            <h1>45</h1>
+            <h1 id="radQueNr">45</h1>
         </div>
         </div>
         <div class="row">
@@ -81,15 +82,15 @@
         </div>
         <div class="row">
         <div class="rad_total_in_que_number">
-             <h3 style="color: orangered">5</h3>
+             <h3 id="totalRadQueNr" style="color: orangered">5</h3>
         </div>
         </div>
         <div class='rad_row'>
          <div class="rad_footer">
         <div class="rad_back_arrow">
-         <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
+         <i onclick="backRad()" style="cursor:pointer" class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
         </div>
-        <div class="btn btn-primary btn-lg btn-responsive">Nästa</div>
+        <div onclick="nextRad()" class="btn btn-primary btn-lg btn-responsive">Nästa</div>
         </div><br>
        </div>
     </div>
@@ -110,7 +111,7 @@
         </div> 
         <div class="row">
         <div class="que_number">
-            <h1>20</h1>
+            <h1 id="verkNbr">20</h1>
         </div>
         </div>
         <div class="row">
@@ -120,40 +121,27 @@
         </div>
         <div class="row">
         <div class="total_in_que_number">
-             <h3 style="color: orangered">2</h3>
+             <h3 id="totalVerkNbr" style="color: orangered">2</h3>
         </div>
         </div>
         <div class='row'>
          <div class="footer">
         <div class="back_arrow">
-         <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
+         <i onclick="backVerk()" style="cursor:pointer" class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
         </div>
-        <div class="btn btn-primary btn-lg btn-responsive">Nästa</div>
+        <div onclick="nextVerk()" class="btn btn-primary btn-lg btn-responsive">Nästa</div>
         </div><br>
        </div>    
-   </div>
-   <!--//This is a right column --> 
+    </div>
+    <!--//This is a right column --> 
+    </div>
 
-   </div>
     <!-- JS -->
-   <script>
-var myWindow;
-
-function openWin() {
-    var url="./mini_que.html";
-    window.open(url, "", "width=290px, height=175, resizable=no, dialog=yes, minimizable=no, maximizable=no");
-    return false;
-   
-}
-
-</script>
-  <link href="js/bootstrap.min.js" rel="stylesheet">
-  <link href="js/bootstrap.js" rel="stylesheet">
+    <script src="./js/myScript.js"></script> 
+    <link href="js/bootstrap.min.js" rel="stylesheet">
+    <link href="js/bootstrap.js" rel="stylesheet">
   
   
-
-
-
 </body>
 
 
