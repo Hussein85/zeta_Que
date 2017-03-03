@@ -58,7 +58,7 @@ function nextKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
         antalIKö -= 1;
     }
     document.getElementById(totalQueNbrId).innerHTML = antalIKö;
-    document.getElementById("audio1").play();
+    document.getElementById("audio1").Play();
 
     // Change color
     clearInterval(t1);
@@ -72,7 +72,7 @@ function nextKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
         }      
      }, duration);
 
-     // Save kassaNr and antalIKö to localStorage
+     // Save kassaNr and antalIKö to localStorage  
      var temp1 = JSON.parse(localStorage.getItem('queData'));
      temp1['kassa'] = kassaNr;
      temp1['totalIKassa'] = antalIKö;
@@ -92,7 +92,7 @@ function backKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
     document.getElementById(queNbrId).innerHTML = kassaNr;
     antalIKö += 1;
     document.getElementById(totalQueNbrId).innerHTML = antalIKö;
-    document.getElementById("audio1").play();
+    document.getElementById("audio1").Play();
 
     // Change color
     clearInterval(t1);
@@ -107,10 +107,12 @@ function backKassa1(queNbrId, totalQueNbrId, flashInterval, duration ){
     }, duration);
 
      // Save kassaNr and antalIKö to localStorage
+     
      var temp1 = JSON.parse(localStorage.getItem('queData'));
      temp1['kassa'] = kassaNr;
      temp1['totalIKassa'] = antalIKö;
      localStorage.setItem('queData', JSON.stringify(temp1));
+     
 
 }
 
@@ -128,7 +130,7 @@ function nextRad1(queNbrId, totalQueNbrId, flashInterval, duration ){
         antalIKö -= 1;
     }
     document.getElementById(totalQueNbrId).innerHTML = antalIKö;
-    document.getElementById("audio1").play();
+    document.getElementById("audio1").Play();
 
     // Change color
     clearInterval(t3);
@@ -143,10 +145,12 @@ function nextRad1(queNbrId, totalQueNbrId, flashInterval, duration ){
      }, duration);
      
       // Save kassaNr and antalIKö to localStorage
+      
      var temp1 = JSON.parse(localStorage.getItem('queData'));
      temp1['radgivning'] = kassaNr;
      temp1['totalRad'] = antalIKö;
      localStorage.setItem('queData', JSON.stringify(temp1));
+     
 
 }
 
@@ -162,7 +166,7 @@ function backRad1(queNbrId, totalQueNbrId, flashInterval, duration ){
     document.getElementById(queNbrId).innerHTML = kassaNr;
     antalIKö += 1;
     document.getElementById(totalQueNbrId).innerHTML = antalIKö;
-    document.getElementById("audio1").play();
+    document.getElementById("audio1").Play();
 
     // Change color
     clearInterval(t3);
@@ -177,10 +181,12 @@ function backRad1(queNbrId, totalQueNbrId, flashInterval, duration ){
     }, duration);
 
       // Save kassaNr and antalIKö to localStorage
+      
      var temp1 = JSON.parse(localStorage.getItem('queData'));
      temp1['radgivning'] = kassaNr;
      temp1['totalRad'] = antalIKö;
      localStorage.setItem('queData', JSON.stringify(temp1));
+     
 }
 
 
@@ -197,7 +203,7 @@ function nextVerk1(queNbrId, totalQueNbrId, flashInterval, duration ){
         antalIKö -= 1;
     }
     document.getElementById(totalQueNbrId).innerHTML = antalIKö;
-    document.getElementById("audio1").play();
+    document.getElementById("audio1").Play();
 
     // Change color
     clearInterval(t5);
@@ -211,11 +217,12 @@ function nextVerk1(queNbrId, totalQueNbrId, flashInterval, duration ){
         }      
      }, duration);
 
-       // Save kassaNr and antalIKö to localStorage
+       // Save kassaNr and antalIKö to localStorage   
      var temp1 = JSON.parse(localStorage.getItem('queData'));
      temp1['verkstad'] = kassaNr;
      temp1['totalVerk'] = antalIKö;
      localStorage.setItem('queData', JSON.stringify(temp1));
+     
      
 }
 
@@ -231,7 +238,7 @@ function backVerk1(queNbrId, totalQueNbrId, flashInterval, duration ){
     document.getElementById(queNbrId).innerHTML = kassaNr;
     antalIKö += 1;
     document.getElementById(totalQueNbrId).innerHTML = antalIKö;
-    document.getElementById("audio1").play();
+    document.getElementById("audio1").Play();
 
     // Change color
     clearInterval(t5);
